@@ -2,6 +2,7 @@ abstract public class State {
   // 経過時間を記録するための変数
   long t_start;
   float t;
+  color basic = color(100);
   State() {
     t_start = millis(); 
   }
