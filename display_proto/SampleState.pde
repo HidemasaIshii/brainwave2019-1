@@ -3,6 +3,7 @@ public class SampleState extends State{
   int wait_time = 5;  // サンプル再生までの時間[s]
   int duration = 5;  // 1サンプル当たりの経過時間[s]
   boolean playing = false;
+  
   void drawState(){
     int i = int((t-float(wait_time))/duration);
     if (i < 0) i = 0;
@@ -36,7 +37,7 @@ public class SampleState extends State{
   
   State decideState(){
     if (t > wait_time + sampleNum * duration) {  // サンプルが再生し終わったら
-      background(0);
+      background(basic);
       return new recommendState();  // おすすめを表示する
     }
     return this;
