@@ -6,12 +6,9 @@ abstract public class State {
   Music music;
   BrainWave brainwave;
   
-<<<<<<< HEAD
-=======
   // 標準の色
-  color bgCol = color(75), textCol = color(225);
+  color bgCol = color(75), textCol = color(230);
   
->>>>>>> ishii_branch
   State doState() {
     // 経過時間tを更新する
     t = (millis() - t_start) / 1000.0 ;
