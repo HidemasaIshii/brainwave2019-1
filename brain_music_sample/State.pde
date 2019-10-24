@@ -3,7 +3,8 @@ abstract public class State {
   long t_start;
   float t;
   int top_idx;
-  Minim minim;
+  Music music;
+  BrainWave brainwave;
   
   State doState() {
     // 経過時間tを更新する

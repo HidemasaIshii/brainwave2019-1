@@ -1,6 +1,7 @@
 public class StartState extends State{
-  StartState(Minim minim) {
-    this.minim = minim;
+  StartState(Music music, BrainWave brainwave) {
+    this.music = music;
+    this.brainwave = brainwave;
   }
   
  void drawState() {

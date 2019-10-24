@@ -11,12 +11,16 @@ import ddf.minim.ugens.*;
 // 
 
 State state;
+BrainWave brainwave;
+Music music;
 Minim minim;
 
 void setup() {
   // 画面の設定とか
   minim = new Minim(this);
-  state = new StartState(minim);
+  brainwave = new BrainWave();
+  music = new Music(minim);
+  state = new StartState(music, brainwave);
 }
 
 void draw() {
