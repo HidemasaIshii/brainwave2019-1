@@ -7,7 +7,7 @@ public class Music {
     this.minim = minim;
   }
   
-  void setStart(time) {
+  void setStart(long time) {
     t_start = time; 
   }
   
@@ -16,7 +16,7 @@ public class Music {
     
   }
   
-  String[] getInfo(idx) {
+  String[] getInfo(int idx) {
     // 指定された曲に関連する情報を返す
     return info;
   }

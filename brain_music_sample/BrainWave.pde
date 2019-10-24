@@ -3,7 +3,7 @@ public class BrainWave {
   int top_idx;
   float[] average;
   
-  void setStart(time) {
+  void setStart(long time) {
     t_start = time;
   }
   

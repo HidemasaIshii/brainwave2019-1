@@ -1,5 +1,5 @@
 public class SampleState extends State{
-  boolean playing = False;
+  boolean playing = false;
   
   void drawState() {
     
