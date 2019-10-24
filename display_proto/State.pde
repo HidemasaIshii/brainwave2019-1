@@ -3,8 +3,10 @@ abstract public class State {
   long t_start;
   float t;
   color basic = color(100);
+  PlayMusic playMusic;
   State() {
-    t_start = millis(); 
+    t_start = millis();
+    playMusic = new PlayMusic();
   }
   
   State doState() {

@@ -19,6 +19,7 @@ public class SampleState extends State{
       // 1回だけ音楽を再生し始める＋脳波の計測をスタートする
       if (t > wait_time) {
         // 音楽を再生する
+        playMusic.playMusic();
         // 脳波の計測を始める
         playing = true;
       }

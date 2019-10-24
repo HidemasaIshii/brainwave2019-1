@@ -62,9 +62,10 @@ public class Button {
   }
   
   boolean checkInMouse() {
-    if (mouseX > b_x - b_width/2 && mouseX < b_x + b_width/2
-        && mouseY > b_y - b_height/2 && mouseY < b_y + b_height/2) {
-      return true;
+    if (mouseX > b_x - b_width/2 && mouseX < b_x + b_width/2){
+      if (mouseY > b_y - b_height/2 && mouseY < b_y + b_height/2) {
+        return true;
+      }
     }
     return false;
   }
