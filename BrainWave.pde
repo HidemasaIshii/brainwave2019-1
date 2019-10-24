@@ -9,17 +9,11 @@ final int N_MUSIC = 50;
 final int TIME_SPAN = 90;
 float[] sum = new float[N_MUSIC];
 int count = 0;
-float[] avg = new float[N_MUSIC];
 float[] avg_tmp = new float[N_MUSIC];
 float[] avg_of_Nch = new float[N_MUSIC];
 int mu_idx=0;
-
-void setup(){
-  frameRate(30);
-  smooth();
-  
-
-}
+float min_avg = pow(10, 10);
+int min_idx;
 
 
 void oscEvent(OscMessage msg){
@@ -33,7 +27,7 @@ void oscEvent(OscMessage msg){
       
     }
   }    
-    if(count == 90){   //every 90s 
+    if(count == 90*5){   //every 90s 
       for(int ch = 0; ch < N_CHANNELS; ch++){
         avg_tmp[ch] = sum[ch] / count;
         sum[ch] = 0; //reset sum[ch]
@@ -43,16 +37,24 @@ void oscEvent(OscMessage msg){
         avg_of_Nch[mu_idx] += avg_tmp[ch];
         avg_tmp[ch] = 0; //reset avg_tmp
       }
+      
       avg_of_Nch[mu_idx] = avg_of_Nch[mu_idx] / N_CHANNELS;
+
+      
+      if(avg_of_Nch[mu_idx] < min_avg){
+        min_avg = avg_of_Nch[mu_idx];
+        min_idx = mu_idx;
+      }
+      
       println(avg_of_Nch[mu_idx]);
-      println("count:"+mu_idx);
+      println("min:"+min_avg);
+      println("min_idx:"+min_idx);        
       
       mu_idx += 1;
       count = 0;
       
       if(mu_idx == N_MUSIC-1){
-        //stop the loop and return avg_of_Nch
+        //stop the loop and return min_idx
       }
-
   }
 }
