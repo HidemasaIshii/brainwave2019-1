@@ -7,7 +7,7 @@ public class SampleState extends State{
   void drawState() {
     if (!playing) {
       int bgcolor = int(255/t);
-      if (bgcolor > 150) bgcolor = 150;
+      if (bgcolor > 200) bgcolor = 200;
       if (bgcolor < 0) bgcolor = 0;
       background(bgcolor);
       textSize(64);

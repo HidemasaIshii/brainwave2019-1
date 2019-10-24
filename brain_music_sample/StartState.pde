@@ -15,7 +15,7 @@ public class StartState extends State {
   }
  
   State decideState() {
-    if (keyPressed && key == ' '){  // もしスペースキーが押されたら
+    if (keyPressed && key == ' '){  // もしもスペースキーが押されたら
       return new SampleState();
     }
     return this;

@@ -7,7 +7,7 @@ abstract public class State {
   BrainWave brainwave;
   
   // 標準の色
-  color bgCol = color(75), textCol = color(230);
+  color bgCol = color(75), textCol = color(225);
   
   State doState() {
     // 経過時間tを更新する
