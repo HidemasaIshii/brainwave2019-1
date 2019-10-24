@@ -1,3 +1,15 @@
+import netP5.*;
+import oscP5.*;
+
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+// 
+
 State state;
 Minim minim;
 
