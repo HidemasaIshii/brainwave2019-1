@@ -1,15 +1,16 @@
+import java.util.*;
+
 public class Music {
   AudioPlayer player;
   long t_start;
-  String[] info;
   Minim minim;
-  int index = (int)t_start%5;
-  int[] SampleList = new int[5];
-  for(int i = 0; i < 5; i++) {
-    SampleList[i] = index;
-    if(index == 4) index = 0;
-    else index++;
-  }
+  //サンプル曲の配列
+  String[] SampleList = {"1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3"};
+  //TODO:サンプルの並べ替え
+  
+  //おすすめ曲の配列
+  //TODO:曲目とそれに関連する情報
+  String[][] info = {};
   
   Music(Minim minim) {
     this.minim = minim;
@@ -21,6 +22,8 @@ public class Music {
   
   void playSample() {
     // サンプルを再生する
+    //TODO:音楽を時間通り止める
+    
     int count = 0;
     float t = (millis() - t_start) / 1000.0;
     if(t <= 90 && count == 0){
@@ -53,7 +56,11 @@ public class Music {
   
   String[] getInfo(int idx) {
     // 指定された曲に関連する情報を返す
-    return info;
+    if(SampleList[idx] == "1.mp3") return info[0];
+    else if(SampleList[idx] == "2.mp3") return info[1];
+    else if(SampleList[idx] == "3.mp3") return info[2];
+    else if(SampleList[idx] == "4.mp3") return info[3];
+    else return info[4];
   }
   
 }

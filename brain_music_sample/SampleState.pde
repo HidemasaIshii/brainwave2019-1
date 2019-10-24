@@ -19,7 +19,7 @@ public class SampleState extends State{
         // 音楽を再生する
 //        music.setStart(start);
         // 脳波の計測を始める
-        brainwave.setStart(start);
+        //brainwave.setStart(start);
         playing = true;
       }
     } else {
