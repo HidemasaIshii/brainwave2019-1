@@ -8,7 +8,16 @@ public class StartState extends State{
    
  }
  
+<<<<<<< HEAD
  State decideState() {
    
  }
+=======
+  State decideState() {
+    if (keyPressed && key == ' '){  // もしもスペースキーが押されたら
+      return new SampleState();
+    }
+    return this;
+  }
+>>>>>>> ishii_branch
 }
