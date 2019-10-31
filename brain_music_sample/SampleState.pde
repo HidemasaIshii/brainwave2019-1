@@ -1,8 +1,8 @@
 public class SampleState extends State{
   boolean playing = false;
-  int sampleNum = 3;  // サンプル数
+  int sampleNum = 5;  // サンプル数
   int wait_time = 5;  // サンプル再生までの時間[s]
-  int duration = 1;  // 1サンプル当たりの経過時間[s]
+  int duration = 5;  // 1サンプル当たりの再生時間[s]
   
   SampleState(Music music, BrainWave brainwave){
     this.music = music;
@@ -22,13 +22,15 @@ public class SampleState extends State{
       if (t > wait_time) {
         long start = millis();
         // 音楽を再生する
-//        music.setStart(start);
+        music.setStart(start);
         // 脳波の計測を始める
-        //brainwave.setStart(start);
+        brainwave.setStart(start);
         playing = true;
       }
     } else {
       background(bgCol);
+      music.playSample(duration);
+      brainwave.calc(duration);
     }
     text(nf(t, 1, 3)  + "sec.", width * 0.5, height * 0.7);
   }

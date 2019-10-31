@@ -17,6 +17,7 @@ public class BrainWave {
   float min_avg = pow(10, 10);
   int min_idx;
   
+  int duration = 90;  // 1サンプル当たりの再生時間[s]，初期設定90秒
   
   void setStart(long time) {
     t_start = time;
@@ -27,10 +28,10 @@ public class BrainWave {
     return min_idx;    
   }
   
-  void calc() { // calculate avg for each music every 90s
+  void calc(int duration) { // calculate avg for each music every duration[s]
     float t = (millis() - t_start) / 1000.0;
     
-    if(t-90*mu_idx > 90){   //every 90s 
+    if(t-duration*mu_idx > duration){   //every duration[s] 
 
       for(int ch = 0; ch < N_CHANNELS; ch++){
         avg_tmp[ch] = sum[ch] / count;
