@@ -2,6 +2,11 @@ abstract public class State {
   // 各画面ごとの処理を記述するクラスの親クラス
   long t_start;
   float t;
+  
+  MouseEvent e;
+  
+  int sampleNum = 5;  // サンプル数
+
   int top_idx;
   Music music;
   BrainWave brainwave;
@@ -13,7 +18,8 @@ abstract public class State {
     t_start = millis();
   }
   
-  State doState() {
+  State doState(MouseEvent e_input) {
+    e = e_input;
     // 経過時間tを更新する
     t = (millis() - t_start) / 1000.0 ;
     // 実際の処理

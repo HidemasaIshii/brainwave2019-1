@@ -12,6 +12,7 @@ State state;
 BrainWave brainwave;
 Music music;
 Minim minim;
+MouseEvent e;
 
 void setup() {
   // 各インスタンスの生成
@@ -31,5 +32,9 @@ void setup() {
 }
 
 void draw() {
-  state = state.doState();
+  state = state.doState(e);
+}
+
+void mousePressed(MouseEvent e_draw){
+  e = e_draw;
 }

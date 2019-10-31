@@ -24,10 +24,15 @@ public class Music {
     SampleList.add("5.mp3");
     Collections.shuffle(SampleList); //サンプルの並び替え
     
+    // テスト用に曲情報をいれる
     for(int i=0; i<5; i++){
       for(int j=0; j<3; j++){
         for(int k=0; k<3; k++){
-          info[i][j][k] = "("+i +", "+ j +", "+ k+")";
+          if(k < 2){
+            info[i][j][k] = "("+i +", "+ j +", "+ k+")";
+          } else {
+            info[i][j][k] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
+          }
         }
       }
     }

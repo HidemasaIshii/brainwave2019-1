@@ -1,8 +1,7 @@
 public class SampleState extends State{
   boolean playing = false;
-  int sampleNum = 5;  // サンプル数
-  int wait_time = 5;  // サンプル再生までの時間[s]
-  int duration = 5;  // 1サンプル当たりの再生時間[s]
+  int wait_time = 2;  // サンプル再生までの時間[s]
+  int duration = 1;  // 1サンプル当たりの再生時間[s]
   
   SampleState(Music music, BrainWave brainwave){
     this.music = music;
