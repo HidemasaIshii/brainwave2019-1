@@ -58,7 +58,7 @@ public class BrainWave {
   }
   
   void oscEvent(OscMessage msg){
-    // add data to sum 
+  // add data to sum 
   float data;
   if(msg.checkAddrPattern("/muse/eeg")){
     count += 1;

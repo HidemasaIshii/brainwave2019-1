@@ -23,6 +23,14 @@ public class Music {
     SampleList.add("4.mp3");
     SampleList.add("5.mp3");
     Collections.shuffle(SampleList); //サンプルの並び替え
+    
+    for(int i=0; i<5; i++){
+      for(int j=0; j<3; j++){
+        for(int k=0; k<3; k++){
+          info[i][j][k] = "("+i +", "+ j +", "+ k+")";
+        }
+      }
+    }
   }
   
   void setStart(long time) {
