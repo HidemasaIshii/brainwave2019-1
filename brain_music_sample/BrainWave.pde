@@ -9,10 +9,10 @@ public class BrainWave {
   final int N_CHANNELS = 4;
   final int N_MUSIC = 50;
   final int TIME_SPAN = 90;
-  float[] sum = new float[N_MUSIC];
+  float[] sum = new float[N_MUSIC];  // チャンネルごとの総和
   int count = 0;
-  float[] avg_tmp = new float[N_MUSIC];
-  float[] avg_of_Nch = new float[N_MUSIC];
+  float[] avg_tmp = new float[N_MUSIC];  // チャンネルごとの平均値を格納
+  float[] avg_of_Nch = new float[N_MUSIC];  // サンプルごとの4チャンネルの平均値
   int mu_idx=0;
   float min_avg = pow(10, 10);
   int min_idx;
