@@ -8,6 +8,7 @@ public class Music {
   String[] SampleList = {"1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3"};
   //TODO:サンプルの並べ替え
   
+  
   //おすすめ曲の配列
   //TODO:曲目とそれに関連する情報
   String[][] info = {};
@@ -22,34 +23,41 @@ public class Music {
   
   void playSample() {
     // サンプルを再生する
-    //TODO:音楽を時間通り止める
     
     int count = 0;
     float t = (millis() - t_start) / 1000.0;
     if(t <= 90 && count == 0){
       count++;
-      player = minim.loadFile("1.mp3");
-      player.play();
+      player = minim.loadFile(SampleList[0]);
+      player.play(0); //再生開始時間の指定
     }
     else if(t > 90 && t <= 180 && count == 1){
       count++;
-      player = minim.loadFile("2.mp3");
-      player.play();
+      player.close(); //前の音楽ファイルの再生を止める
+      player = minim.loadFile(SampleList[1]);
+      player.play(0);
     }
     else if(t > 180 && t <= 270 && count == 2){
       count++;
-      player = minim.loadFile("3.mp3");
-      player.play();
+      player.close();
+      player = minim.loadFile(SampleList[2]);
+      player.play(0);
     }
     else if(t > 270 && t <= 360 && count == 3){
       count++;
-      player = minim.loadFile("4.mp3");
-      player.play();
+      player.close();
+      player = minim.loadFile(SampleList[3]);
+      player.play(0);
     }
     else if(t > 360 && t <= 450 && count == 4){
       count++;
-      player = minim.loadFile("5.mp3");
-      player.play();
+      player.close();
+      player = minim.loadFile(SampleList[4]);
+      player.play(0);
+    }
+    else if(t > 450 && count == 5){
+      count++;
+      player.close();
     }
     
   }
