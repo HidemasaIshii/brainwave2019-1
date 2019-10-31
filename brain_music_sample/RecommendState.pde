@@ -9,6 +9,9 @@ public class RecommendState extends State{
   RecommendState(Music music, BrainWave brainwave){
     this.music = music;
     this.brainwave = brainwave;
+    // Topidxを取得する
+    top_idx = brainwave.getTopidx();
+    song_info = music.getInfo(top_idx);
   }
   
   void drawState() {
@@ -18,11 +21,6 @@ public class RecommendState extends State{
     text("あなたへのオススメ", width * 0.5, height * 0.15);
     textSize(32);
     
-    // Topidxを取得する
-    top_idx = brainwave.getTopidx();
-
-    song_info = music.getInfo(top_idx);
-
     // 曲名を表示する
     for(int i=0; i<3; i++){
       text(song_info[i][0], width * 0.4, height * (0.25 + 0.2 * i));
@@ -54,15 +52,15 @@ public class RecommendState extends State{
     }
     
     textSize(32);
-    text("cキーを押して閉じる", width * 0.5, height * 0.9);
+    text("sキーを押して閉じる", width * 0.5, height * 0.9);
   }
   
   // ボタンが押されたらリンクに飛ぶ
   void openLink(float x, float y) {
 //    println("pushed");
-//    println(b_yloc[0], b_yloc[1], b_yloc[2]);
-//    println(x,y);
-    if(width * 0.8 - b_width/2 <= x && x <= width*0.8 + b_width/2){
+    println(song_info[0][2], song_info[1][2], song_info[2][2]);
+    println(x,y);
+    if(width * 0.8 - b_width/2 <= x && x <= width*0.8 + b_width/2){ //<>//
       if(b_yloc[0] - b_height/2 <= y && y <= b_yloc[0] + b_height/2){
         print("button0 pushed!");
         link(song_info[0][2]);
@@ -79,7 +77,7 @@ public class RecommendState extends State{
   }
   
   State decideState() {
-    if (keyPressed && key == 's'){  // もしスペースキーが押されたら
+    if (keyPressed && key == 's'){  // もしsキーが押されたら
       background(bgCol);
       //return new StartState(music, brainwave);
       exit();

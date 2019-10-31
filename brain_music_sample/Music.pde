@@ -24,7 +24,7 @@ public class Music {
     SampleList.add("5.mp3");
     Collections.shuffle(SampleList); //サンプルの並び替え
     
-    // テスト用に曲情報をいれる
+/*    // テスト用に曲情報をいれる
     for(int i=0; i<5; i++){
       for(int j=0; j<3; j++){
         for(int k=0; k<3; k++){
@@ -36,32 +36,33 @@ public class Music {
         }
       }
     }
+    */
     
     // 曲情報の設定
     // ジャンル0: シャンソン
-    info[0][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[0][0][1] = "Edith Piaf"; info[0][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[0][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[0][1][1] = "Lucienne Boyer"; info[0][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[0][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[0][2][1] = "Danièle Vidal"; info[0][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA ";
+    info[0][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose";    info[0][0][1] = "Edith Piaf";      info[0][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
+    info[0][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour";  info[0][1][1] = "Lucienne Boyer";  info[0][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
+    info[0][2][0] = "オー・シャンゼリゼ Les Champs-Elysées";    info[0][2][1] = "Danièle Vidal";   info[0][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
     
     // ジャンル1: シャンソン
-    info[1][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[1][0][1] = "Edith Piaf"; info[0][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[1][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[1][1][1] = "Lucienne Boyer"; info[0][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[1][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[1][2][1] = "Danièle Vidal"; info[0][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA ";
+    info[1][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[1][0][1] = "Edith Piaf"; info[1][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
+    info[1][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[1][1][1] = "Lucienne Boyer"; info[1][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
+    info[1][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[1][2][1] = "Danièle Vidal"; info[1][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
     
     // ジャンル2: シャンソン
-    info[2][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[2][0][1] = "Edith Piaf"; info[0][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[2][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[2][1][1] = "Lucienne Boyer"; info[0][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[2][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[2][2][1] = "Danièle Vidal"; info[0][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA ";
+    info[2][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[2][0][1] = "Edith Piaf"; info[2][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
+    info[2][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[2][1][1] = "Lucienne Boyer"; info[2][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
+    info[2][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[2][2][1] = "Danièle Vidal"; info[2][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
     
     // ジャンル3: シャンソン
-    info[3][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[3][0][1] = "Edith Piaf"; info[0][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[3][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[3][1][1] = "Lucienne Boyer"; info[0][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[3][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[3][2][1] = "Danièle Vidal"; info[0][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA ";
+    info[3][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[3][0][1] = "Edith Piaf"; info[3][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
+    info[3][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[3][1][1] = "Lucienne Boyer"; info[3][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
+    info[3][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[3][2][1] = "Danièle Vidal"; info[3][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
     
     // ジャンル4: シャンソン
-    info[4][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[4][0][1] = "Edith Piaf"; info[0][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[4][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[4][1][1] = "Lucienne Boyer"; info[0][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[4][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[4][2][1] = "Danièle Vidal"; info[0][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA ";    
+    info[4][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[4][0][1] = "Edith Piaf"; info[4][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
+    info[4][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[4][1][1] = "Lucienne Boyer"; info[4][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
+    info[4][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[4][2][1] = "Danièle Vidal"; info[4][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";    
   }
   
   void setStart(long time) {
