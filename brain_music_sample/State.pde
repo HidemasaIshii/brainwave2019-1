@@ -8,6 +8,10 @@ abstract public class State {
   
   // 標準の色
   color bgCol = color(75), textCol = color(230);
+
+  State() {
+    t_start = millis();
+  }
   
   State doState() {
     // 経過時間tを更新する
@@ -20,4 +24,11 @@ abstract public class State {
   
   abstract void drawState();  // 状態に応じた描画をする
   abstract State decideState();  // 次の状態を返す
+  
+  void setBrainwave(BrainWave brainwave){
+    this.brainwave = brainwave;
+  }
+  void setMusic(Music music){
+    this.music = music;
+  }
 }

@@ -1,7 +1,7 @@
 public class StartState extends State {
   StartState(Music music, BrainWave brainwave) {
-    this.music = music;
-    this.brainwave = brainwave;
+    setMusic(music);
+    setBrainwave(brainwave);
   }
   
   void drawState() {
@@ -16,7 +16,7 @@ public class StartState extends State {
  
   State decideState() {
     if (keyPressed && key == ' '){  // もしスペースキーが押されたら
-      return new SampleState();
+      return new SampleState(music,brainwave);
     }
     return this;
   }

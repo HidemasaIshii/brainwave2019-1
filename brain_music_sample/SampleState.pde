@@ -2,7 +2,12 @@ public class SampleState extends State{
   boolean playing = false;
   int sampleNum = 3;  // サンプル数
   int wait_time = 5;  // サンプル再生までの時間[s]
-  int duration = 5;  // 1サンプル当たりの経過時間[s]
+  int duration = 1;  // 1サンプル当たりの経過時間[s]
+  
+  SampleState(Music music, BrainWave brainwave){
+    this.music = music;
+    this.brainwave = brainwave;
+  }
   
   void drawState() {
     if (!playing) {
@@ -31,7 +36,7 @@ public class SampleState extends State{
   State decideState() {
     if (t > wait_time + sampleNum * duration) {  // サンプルが再生し終わったら
       background(bgCol);
-      return new recommendState();  // おすすめを表示する
+      return new RecommendState(music,brainwave);  // おすすめを表示する
     }
     return this;
   }

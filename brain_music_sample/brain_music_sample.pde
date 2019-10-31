@@ -8,8 +8,6 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-// 
-
 State state;
 BrainWave brainwave;
 Music music;
