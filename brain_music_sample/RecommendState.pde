@@ -2,8 +2,8 @@ public class RecommendState extends State{ //<>//
   String[][] song_info = new String[4][3];
   
   // 聴くボタン
-  float b_width = 150;  // ボタンの幅
-  float b_height = 60;  // ボタンの高さ
+  float b_width = 220;  // ボタンの幅
+  float b_height = 80;  // ボタンの高さ
   float[] b_yloc = new float[3];  // ボタンを表示するy座標
   
   // 閉じるボタン
@@ -13,12 +13,15 @@ public class RecommendState extends State{ //<>//
   
   boolean pressed = false;  // ボタンが押されているか
   
+  String recommendText = "あなたへのおススメは…";
+  
   RecommendState(Music music, BrainWave brainwave){
     this.music = music;
     this.brainwave = brainwave;
     // Topidxを取得する
     top_idx = brainwave.getTopidx();
     song_info = music.getInfo(top_idx);
+    recommendText += music.getGenre(top_idx);
   }
   
   void drawState() {
@@ -30,15 +33,15 @@ public class RecommendState extends State{ //<>//
     rect(width*0.5, height*0.5, width*0.9, height*0.65);
     
     fill(textCol);
-    textSize(64);
-    text("あなたへのオススメ", width * 0.5, height * 0.12);
-    textSize(32);
+    textSize(80);
+    text(recommendText, width * 0.5, height * 0.12);
+    textSize(48);
     
     // 曲名を表示する
     for(int i=0; i<3; i++){
       text(song_info[i+1][0], width * 0.4, height * (0.25 + 0.2 * i));
     }
-    textSize(24);
+    textSize(48);
     // アーティスト名を表示する
     for(int i=0; i<3; i++){
       text(song_info[i+1][1], width * 0.4, height * (0.35 + 0.2 * i));
@@ -52,7 +55,7 @@ public class RecommendState extends State{ //<>//
           rect(width * 0.8, b_yloc[i], b_width, b_height);
           
           fill(250);
-          textSize(24);
+          textSize(36);
           text("聴いてみる", width * 0.8, height * (0.35 + 0.2 * i));
     }
     if(!pressed){  // ボタンが押されていないとき

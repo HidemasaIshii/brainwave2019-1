@@ -123,4 +123,14 @@ public class Music {
     else return info[4];
   }
   
+  String getGenre(int idx) {
+    // 指定された曲のジャンル名を返す
+    if(SampleList.get(idx) == "1.mp3") return "シャンソン";
+    else if(SampleList.get(idx) == "2.mp3") return "カンツォーネ";
+    else if(SampleList.get(idx) == "3.mp3") return "アラブ音楽";
+    else if(SampleList.get(idx) == "4.mp3") return "ケルト音楽";
+    else return "中国伝統音楽";
+  }
+
+  
 }
