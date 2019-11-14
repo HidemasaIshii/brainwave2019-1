@@ -12,7 +12,6 @@ public class Music {
   ArrayList<String> SampleList = new ArrayList<String>();
   
   //おすすめ曲の配列
-  //TODO:曲目とそれに関連する情報
   String[][][] info = new String[5][4][3];
   
   Music(Minim minim) {
