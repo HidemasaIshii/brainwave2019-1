@@ -1,4 +1,5 @@
 public class RecommendState extends State{ //<>//
+  PImage[] img = new PImage[5];
   String[][] song_info = new String[4][3];
   
   // 聴くボタン
@@ -14,6 +15,7 @@ public class RecommendState extends State{ //<>//
   boolean pressed = false;  // ボタンが押されているか
   
   String recommendText = "あなたへのおススメは…";
+  String genre;
   
   RecommendState(Music music, BrainWave brainwave){
     this.music = music;
@@ -21,14 +23,32 @@ public class RecommendState extends State{ //<>//
     // Topidxを取得する
     top_idx = brainwave.getTopidx();
     song_info = music.getInfo(top_idx);
-    recommendText += music.getGenre(top_idx);
+    genre = music.getGenre(top_idx);
+    recommendText += genre;
+    for(int i=0; i<5; i++){
+      String fileName = i+1 + ".jpg";      
+      img[i] = loadImage(fileName);
+    }
   }
   
   void drawState() {
-    background(bgCol);
+    // 背景を表示する
+//    background(bgCol);
+    tint(100);
+    if(genre =="シャンソン"){
+      image(img[0],0,0,width,height);
+    } else if(genre=="カンツォーネ"){
+      image(img[1],0,0,width,height);
+    } else if(genre=="アラブ音楽"){
+      image(img[2],0,0,width,height);
+    } else if(genre=="ケルト音楽"){
+      image(img[3],0,0,width,height);
+    } else if(genre=="中国伝統音楽"){
+      image(img[4],0,0,width,height);
+    }
     // 曲情報の枠を表示する
     noStroke();
-    fill(15);
+    fill(15,50);
     rectMode(CENTER);
     rect(width*0.5, height*0.5, width*0.9, height*0.65);
     

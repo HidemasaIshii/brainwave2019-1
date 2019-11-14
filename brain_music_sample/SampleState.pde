@@ -1,7 +1,7 @@
 public class SampleState extends State{
   boolean playing = false;
   int wait_time = 5;  // サンプル再生までの時間[s]
-  int duration = 30;  // 1サンプル当たりの再生時間[s]
+  int duration = 20;  // 1サンプル当たりの再生時間[s]
   
   float tileCount = 20;
   color circleColor = color(0);
