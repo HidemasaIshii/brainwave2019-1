@@ -1,5 +1,5 @@
-public class RecommendState extends State{
-  String[][] song_info = new String[3][3];
+public class RecommendState extends State{ //<>//
+  String[][] song_info = new String[4][3];
   
   // 聴くボタン
   float b_width = 150;  // ボタンの幅
@@ -23,29 +23,35 @@ public class RecommendState extends State{
   
   void drawState() {
     background(bgCol);
+    // 曲情報の枠を表示する
+    noStroke();
+    fill(15);
+    rectMode(CENTER);
+    rect(width*0.5, height*0.5, width*0.9, height*0.65);
+    
     fill(textCol);
     textSize(64);
-    text("あなたへのオススメ", width * 0.5, height * 0.15);
+    text("あなたへのオススメ", width * 0.5, height * 0.12);
     textSize(32);
     
     // 曲名を表示する
     for(int i=0; i<3; i++){
-      text(song_info[i][0], width * 0.4, height * (0.25 + 0.2 * i));
+      text(song_info[i+1][0], width * 0.4, height * (0.25 + 0.2 * i));
     }
     textSize(24);
     // アーティスト名を表示する
     for(int i=0; i<3; i++){
-      text(song_info[i][1], width * 0.4, height * (0.35 + 0.2 * i));
+      text(song_info[i+1][1], width * 0.4, height * (0.35 + 0.2 * i));
     }
     // リンクを表示する
     for(int i=0; i<3; i++){
           noStroke();
-          fill(50,100,50);
+          fill(30,75,30);
           rectMode(CENTER);
           b_yloc[i] = height * (0.35 + 0.2 * i) - 9;
           rect(width * 0.8, b_yloc[i], b_width, b_height);
           
-          fill(255);
+          fill(250);
           textSize(24);
           text("聴いてみる", width * 0.8, height * (0.35 + 0.2 * i));
     }
@@ -72,18 +78,18 @@ public class RecommendState extends State{
   // ボタンが押されたら下の処理を実行する
   void buttonAction(float x, float y) {
     // 聴くボタン
-    if(width * 0.8 - b_width/2 <= x && x <= width*0.8 + b_width/2){ //<>//
+    if(width * 0.8 - b_width/2 <= x && x <= width*0.8 + b_width/2){
       if(b_yloc[0] - b_height/2 <= y && y <= b_yloc[0] + b_height/2){
         print("button0 pushed!");
-        link(song_info[0][2]);
+        link(song_info[1][2]);
       }
       else if(b_yloc[1] - b_height/2 <= y && y <= b_yloc[1] + b_height/2){
         print("button1 pushed!");
-        link(song_info[1][2]);
+        link(song_info[2][2]);
       }
       else if(b_yloc[2] - b_height/2 <= y && y <= b_yloc[2] + b_height/2){
         print("button2 pushed!");
-        link(song_info[2][2]);
+        link(song_info[3][2]);
       }
     }
     // 閉じるボタン
