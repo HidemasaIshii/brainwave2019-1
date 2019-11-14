@@ -52,22 +52,22 @@ public class Music {
     info[1][3][0] = "フニクリ・フニクラ Funiculi Funicula"; info[1][3][1] = ""; info[1][3][2] = "https://www.youtube.com/watch?v=PG4SbelgIFk";
     
     // ジャンル2: アラビアン
-    info[2][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[2][0][1] = "Edith Piaf"; info[2][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[2][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[2][1][1] = "Lucienne Boyer"; info[2][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[2][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[2][2][1] = "Danièle Vidal"; info[2][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
-    info[2][3][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[2][3][1] = "Danièle Vidal"; info[2][3][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
+    info[2][0][0] = "Bazaar Merchants"; info[2][0][1] = ""; info[2][0][2] = "https://www.youtube.com/watch?v=HRk5d5qrv9c";
+    info[2][1][0] = "Assalamu Alayka"; info[2][1][1] = ""; info[2][1][2] = "https://www.youtube.com/watch?v=xwg9Lf5ruUE";
+    info[2][2][0] = "Sultan's Palace"; info[2][2][1] = ""; info[2][2][2] = "https://www.youtube.com/watch?v=_4vuXA5Zjic";
+    info[2][3][0] = "Pharaoh Ramses II"; info[2][3][1] = ""; info[2][3][2] = "https://www.youtube.com/watch?v=vslsS-Uu5x4";
     
     // ジャンル3: ケルト
-    info[3][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[3][0][1] = "Edith Piaf"; info[3][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[3][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[3][1][1] = "Lucienne Boyer"; info[3][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[3][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[3][2][1] = "Danièle Vidal"; info[3][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
-    info[3][3][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[3][3][1] = "Danièle Vidal"; info[3][3][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
+    info[3][0][0] = "Kesh Jig, Leitrim Fancy"; info[3][0][1] = ""; info[3][0][2] = "https://www.youtube.com/watch?v=FFo6OEw2CJ8";
+    info[3][1][0] = "Silver Spear"; info[3][1][1] = ""; info[3][1][2] = "https://www.youtube.com/watch?v=tXbbnan7_7c";
+    info[3][2][0] = "Maid Behind the Bar"; info[3][2][1] = ""; info[3][2][2] = "https://open.spotify.com/album/0zg3R0xffI4W1rDUZ9Kymj";
+    info[3][3][0] = "Julia Delaney"; info[3][3][1] = ""; info[3][3][2] = "https://www.youtube.com/watch?v=q0ja6x0FLVM";
     
     // ジャンル4: 中国
-    info[4][0][0] = "ラ・ヴィ・アン・ローズ La Vie En Rose"; info[4][0][1] = "Edith Piaf"; info[4][0][2] = "https://www.youtube.com/watch?v=kFzViYkZAz4";
-    info[4][1][0] = "聞かせてよ愛の言葉をParlez-moi d’amour"; info[4][1][1] = "Lucienne Boyer"; info[4][1][2] = "https://www.youtube.com/watch?v=rIAQWr34De0";
-    info[4][2][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[4][2][1] = "Danièle Vidal"; info[4][2][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
-    info[4][3][0] = "オー・シャンゼリゼ Les Champs-Elysées"; info[4][3][1] = "Danièle Vidal"; info[4][3][2] = "https://www.youtube.com/watch?time_continue=128&v=oamRCeLNAWA";
+    info[4][0][0] = "August Moon"; info[4][0][1] = ""; info[4][0][2] = "https://www.youtube.com/watch?v=l6U3M5hkvRQ";
+    info[4][1][0] = "長相思"; info[4][1][1] = ""; info[4][1][2] = "https://www.youtube.com/watch?v=kbSG2OHFQnw";
+    info[4][2][0] = "Fisherman’s Sonata at Dawn"; info[4][2][1] = ""; info[4][2][2] = "https://www.youtube.com/watch?v=rrPBQv4eGb8";
+    info[4][3][0] = "情難枕"; info[4][3][1] = ""; info[4][3][2] = "https://www.youtube.com/watch?v=yzd2YcdYyhA";
     
   }
   
